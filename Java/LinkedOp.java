@@ -58,4 +58,18 @@ public static LinkedList deletePos(LinkedList beg,int pos){
     return beg;
   }
 }
+public static LinkedList reverse(LinkedList beg){
+  LinkedList prev,curr,next;
+  prev=null;
+  curr=beg;
+  while(curr!=null){
+    next=curr.getNext();
+    curr.setNext(prev);
+    prev=curr;
+    curr=next;
+  }
+  return prev;
+  }
+
+
 }

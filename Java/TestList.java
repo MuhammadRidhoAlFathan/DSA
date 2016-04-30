@@ -18,5 +18,8 @@ class TestList{
     System.out.println("*******");
     head=LinkedOp.deletePos(head,67);
     LinkedOp.traverse(head);
+    System.out.println("*******");
+    head=LinkedOp.reverse(head);
+    LinkedOp.traverse(head);
   }
 }
