@@ -1,3 +1,4 @@
+//euclid algorithm depiction in Java
 class Euclid{
   public static int euclid(int p, int q){
     //System.out.printf("%d,%d",p,q);
