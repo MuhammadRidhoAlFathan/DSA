@@ -1,4 +1,13 @@
 class LinkedOp{
+  private static int count=0;
+public static int len(LinkedList head){
+  LinkedList first = head;
+  while (first!=null){
+    count+=1;
+    first=first.getNext();
+  }
+  return count;
+}
 public static void traverse(LinkedList head){
 LinkedList first = head;
 while (first!=null){
@@ -70,6 +79,18 @@ public static LinkedList reverse(LinkedList beg){
   }
   return prev;
   }
+public static LinkedList sort(LinkedList beg){
+  System.out.println("Printing the sorted list");
+LinkedList p,q;
+for (p=beg;p.getNext().getNext()!=null;p=p.getNext()){
+  for(q=p.getNext();q.getNext()!=null;q=q.getNext()){
+    if (p.getData()>q.getData()){
+      int temp=p.getData();
+      p.setData(q.getData());
+      q.setData(temp);
+    }
+  }
+} return beg;
 
-
-}
+    }
+  }

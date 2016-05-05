@@ -21,5 +21,9 @@ class TestList{
     System.out.println("*******");
     head=LinkedOp.reverse(head);
     LinkedOp.traverse(head);
-  }
+    System.out.println("****");
+    System.out.println(LinkedOp.len(head));
+    System.out.println("****");
+    head =LinkedOp.sort(head);
+    LinkedOp.traverse(head);}
 }

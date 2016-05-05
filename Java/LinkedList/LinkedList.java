@@ -12,10 +12,9 @@ class LinkedList{
   this.data = data;
 }
 public LinkedList getNext(){
-  return next;
+  return this.next;
 }
-public void setNext(LinkedList node){
-  next  = node;
+public static void setNext(LinkedList node){
+  this.next  = node;
 }
-
 }
