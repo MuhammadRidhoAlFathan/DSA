@@ -14,7 +14,7 @@ class LinkedList{
 public LinkedList getNext(){
   return this.next;
 }
-public static void setNext(LinkedList node){
+public void setNext(LinkedList node){
   this.next  = node;
 }
 }

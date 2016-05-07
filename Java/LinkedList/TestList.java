@@ -16,7 +16,7 @@ class TestList{
     head = LinkedOp.insertPos(head,12,1);
     LinkedOp.traverse(head);
     System.out.println("*******");
-    head=LinkedOp.deletePos(head,67);
+    head=LinkedOp.deletePos(head,1);
     LinkedOp.traverse(head);
     System.out.println("*******");
     head=LinkedOp.reverse(head);

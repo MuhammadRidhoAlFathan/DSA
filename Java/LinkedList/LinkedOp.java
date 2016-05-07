@@ -1,5 +1,7 @@
+import java.util.Scanner;
 class LinkedOp{
   private static int count=0;
+  private static Scanner reader;
 public static int len(LinkedList head){
   LinkedList first = head;
   while (first!=null){
@@ -22,8 +24,7 @@ public static LinkedList insertStart(LinkedList beg,int data){
   }
   else {
     temp.setNext(beg);
-    beg =temp;
-    return beg;
+    return temp;
   }
 }
 public static LinkedList insertPos(LinkedList beg, int data,int pos){
@@ -93,4 +94,33 @@ for (p=beg;p.getNext().getNext()!=null;p=p.getNext()){
 } return beg;
 
     }
+public static boolean isEmpty(LinkedList head){
+  if (head==null){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+public static LinkedList createStack(){
+    reader = new Scanner(System.in);
+    System.out.println("Enter data for first node in the stack.");
+    int data=reader.nextInt();
+    LinkedList node = new LinkedList(data);
+    return node;
+  }
+public static LinkedList push(LinkedList head){
+  reader = new Scanner(System.in);
+  System.out.println("Enter a number to push");
+  int data = reader.nextInt();
+  head=LinkedOp.insertStart(head,data);
+  return  head;
+}
+public static int pop(LinkedList head){
+  int val=head.getData();
+  head= head.getNext();
+  LinkedOp.traverse(head);
+  return val;
+}
+
   }
