@@ -1,9 +1,10 @@
 class LinkStackTest{
   public static void main(String[] args) {
     Stack stack1 = new Stack(0);
-    stack1.top=stack1.push(1);
-    stack1.top=stack1.push(2);
-    stack1.top=stack1.push(3);
+    LinkedList temp=stack1.getTop();
+    temp=stack1.push(1);
+    temp=stack1.push(2);
+    temp=stack1.push(3);
     stack1.display();
     System.out.println("Popped data is "+stack1.pop());
     stack1.display();
@@ -12,9 +13,12 @@ class LinkStackTest{
 
 }
 class Stack{
-  public  LinkedList top;
+  private LinkedList top;
   public Stack(int data){
     top=new LinkedList(data);
+  }
+  public LinkedList getTop(){
+    return this.top;
   }
   public LinkedList push(int data){
     LinkedList temp= new LinkedList(data);
