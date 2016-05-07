@@ -2,6 +2,7 @@ import java.util.Scanner;
 class LinkedOp{
   private static int count=0;
   private static Scanner reader;
+  private static LinkedList head;
 public static int len(LinkedList head){
   LinkedList first = head;
   while (first!=null){
@@ -118,7 +119,8 @@ public static LinkedList push(LinkedList head){
 }
 public static int pop(LinkedList head){
   int val=head.getData();
-  head= head.getNext();
+  LinkedList p =head;
+  head= p.getNext();
   LinkedOp.traverse(head);
   return val;
 }
